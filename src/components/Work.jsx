@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 const Work = () => {
   const works = [
     {
-      imgSrc: "/src/assets/project-1.jpg",
+      imgSrc: "../assets/project-1.jpg",
       title: "Full stack music app",
       tags: ["API", "MVC", "Development"],
       projectLink: "/",
