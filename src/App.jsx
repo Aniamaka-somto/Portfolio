@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import { ReactLenis, useLenis } from "lenis/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
-function App() {
-  const [count, setCount] = useState(0)
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Work from "./components/Work";
+import Review from "./components/Review";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+
+const App = () => {
+  useGSAP(() => {
+    const elem = gsap.utils.toArray(".reveal-up");
+
+    elem.forEach((element) => {
+      gsap.to(element, {
+        scrollTrigger: { trigger: element, scrub: true },
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+      });
+    });
+  });
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <ReactLenis root>
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Work />
+        <Review />
+        <Contact />
+      </main>
+      <Footer />
+    </ReactLenis>
+  );
+};
 
-export default App
+export default App;
