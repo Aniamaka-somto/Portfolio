@@ -1,6 +1,6 @@
 import React from "react";
 import { ButtonOutline, ButtonPrimary } from "./Button";
-import image1 from "../assets/freepik.png"
+import image1 from "/src/assets/freepik.png"
 
 const Hero = () => {
   return (
