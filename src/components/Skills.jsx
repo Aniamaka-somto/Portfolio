@@ -1,10 +1,12 @@
 import React from "react";
 import SkillCard from "./SkillCard";
+import figma from "/src/assets/figma.svg"
+
 
 const Skills = () => {
   const skillItem = [
     {
-      imgSrc: "/src/assets/figma.svg",
+      imgSrc:figma ,
       label: "Figma",
       desc: "Design tool",
     },
