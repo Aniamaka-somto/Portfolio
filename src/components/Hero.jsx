@@ -1,6 +1,7 @@
 import React from "react";
 import { ButtonOutline, ButtonPrimary } from "./Button";
 import image1 from "/src/assets/freepik.png"
+import imageCover from "./src/assets/avatar-1.jpeg"
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
           <div className="flex items-center gap-3">
             <figure className="img-box w-9 h-9 rounded-lg">
               <img
-                src="./src/assets/avatar-1.jpeg"
+                src={imageCover}
                 alt=""
                 className="img-cover"
                 height={40}
