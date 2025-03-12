@@ -1,5 +1,6 @@
 import React from "react";
 import { ButtonOutline, ButtonPrimary } from "./Button";
+import image1 from "../assets/freepik.png"
 
 const Hero = () => {
   return (
@@ -43,7 +44,7 @@ const Hero = () => {
           via-25% via-sky-400/40 rounded-[60px] overflow-hidden"
           >
             <img
-              src="./src/assets/freepik.png"
+              src={image1}
               alt="Aniamaka Somto"
               className="w-full "
               height={615}
