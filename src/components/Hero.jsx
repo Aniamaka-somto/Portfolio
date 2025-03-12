@@ -1,7 +1,7 @@
 import React from "react";
 import { ButtonOutline, ButtonPrimary } from "./Button";
-import image1 from "/src/assets/freepik.png"
-import imageCover from "./src/assets/avatar-1.jpeg"
+import image1 from "/src/assets/freepik.png";
+import imageCover from "./src/assets/avatar-1.jpeg";
 
 const Hero = () => {
   return (
